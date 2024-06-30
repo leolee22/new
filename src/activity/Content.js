@@ -6,13 +6,15 @@ function Content() {
   const activity = [
     {
       id: 1,
-      item: "活動1",
+      item: "大家齊跑步",
       describe: "活動描述活動描述活動描述活動描述活動描述",
+      date: "2024-06-29",
     },
     {
       id: 2,
-      item: "活動2",
+      item: "大家齊跑步",
       describe: "活動描述活動描述活動描述活動描述活動描述",
+      date: "2024-06-29",
     },
   ];
   return (
@@ -25,7 +27,8 @@ function Content() {
                 <img src={A} alt="I am A" width={"100%"} />
                 <div class="card-body">
                   <h5 class="card-title">{activityItem.item}</h5>
-                  <p class="card-text">{activityItem.describe}</p>
+                  <p class="card-text">描述：{activityItem.describe}</p>
+                  <p class="card-text">活動日期：{activityItem.date}</p>
                   <button type="submit" class="btn btn-info w-100">
                     報名
                   </button>

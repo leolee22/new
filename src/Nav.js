@@ -27,7 +27,7 @@ function Nav() {
                 </Link>
               </li>
               <li class="nav-item">
-                <Link to="/" class="nav-link active">
+                <Link to="/equipment/MyEquipment" class="nav-link active">
                   我的預約
                 </Link>
               </li>
@@ -37,7 +37,7 @@ function Nav() {
                 </Link>
               </li>
               <li class="nav-item">
-                <Link to="/" class="nav-link active">
+                <Link to="/activity/MyActivity" class="nav-link active">
                   我的活動
                 </Link>
               </li>

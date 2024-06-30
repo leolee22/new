@@ -20,7 +20,7 @@ function ActivityStepOne() {
   return (
     <div class="container ">
       <form class="row g-3">
-        <div class="col-6">
+        <div class="col-12">
           <label for="inputState" class="form-label">
             活動開始日期
           </label>
@@ -36,7 +36,7 @@ function ActivityStepOne() {
           </div>
         </div>
 
-        <div class="col-6">
+        <div class="col-12">
           <label for="inputState" class="form-label">
             活動結束日期
           </label>

@@ -2,7 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import EquipmentStepOne from "./equipment/StepOne";
 import EquipmentStepTwo from "./equipment/StepTwo";
 import ActivityStepOne from "./activity/StepOne";
-import ActivityStepTwo from "./activity/StepTwo";
+import MyActivity from "./activity/MyActivity";
+import MyEquipment from "./equipment/MyEquipment";
 import Home from "./Home";
 import Nav from "./Nav";
 import "bootstrap";
@@ -32,8 +33,13 @@ function App() {
         ></Route>
         <Route
           exact
-          path="/activity/StepTwo"
-          element={<ActivityStepTwo />}
+          path="/activity/MyActivity"
+          element={<MyActivity />}
+        ></Route>
+        <Route
+          exact
+          path="/equipment/MyEquipment"
+          element={<MyEquipment />}
         ></Route>
       </Routes>
     </nav>
