@@ -1,11 +1,25 @@
 import { useNavigate } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import React, { useState } from "react";
 import "../CalendarPage.css"; // Import custom CSS file for styling
 
 function StepOne() {
+  const option = [
+    { id: 1, item: "洗澡間" },
+    { id: 2, item: "洗澡間" },
+    { id: 3, item: "洗澡間" },
+    { id: 4, item: "洗澡間" },
+    { id: 5, item: "洗澡間" },
+    { id: 6, item: "洗澡間" },
+  ];
+
+  const option2 = [
+    { id: 1, item: "房間" },
+    { id: 2, item: "設施" },
+    { id: 3, item: "器材" },
+  ];
+
   const navigate = useNavigate();
   const handleButtonClick = () => {
     navigate("/StepTwo"); // Navigates to '/another-page'
@@ -41,9 +55,9 @@ function StepOne() {
           </label>
           <select id="inputState" class="form-select">
             <option selected>項目...</option>
-            <option>房間</option>
-            <option>設施</option>
-            <option>器材</option>
+            {option2.map((optionItem) => (
+              <option>{optionItem.item}</option>
+            ))}
           </select>
         </div>
         <div class="col-12">
@@ -52,9 +66,9 @@ function StepOne() {
           </label>
           <select id="inputState" class="form-select">
             <option selected>細項...</option>
-            <option>洗澡間</option>
-            <option>洗澡間</option>
-            <option>洗澡間</option>
+            {option.map((optionItem) => (
+              <option>{optionItem.item}</option>
+            ))}
           </select>
         </div>
 

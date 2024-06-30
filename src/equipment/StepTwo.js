@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
 const timeSlots = [
@@ -32,12 +31,12 @@ function StepOne() {
     <div class="container">
       <div class="card bg-info-subtle">
         <div class="card-header text-bg-info p-3">
-          <h3>預約設施</h3>
+          <h3>房間</h3>
         </div>
         <div class="card-body">
-          <h5 class="card-title">Equipment 器材</h5>
+          <h5 class="card-title">預約設施 : 洗澡間</h5>
           <p class="card-text">2024-06-29</p>
-          <p class="card-text">間骨車</p>
+          <p class="card-text">洗澡間</p>
           <p class="card-text">* 會員每日最多可預約 4 次</p>
         </div>
       </div>
