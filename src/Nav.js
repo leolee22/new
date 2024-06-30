@@ -32,7 +32,7 @@ function Nav() {
                 </Link>
               </li>
               <li class="nav-item">
-                <Link to="/" class="nav-link active">
+                <Link to="/equipment/StepOne" class="nav-link active">
                   預約設施
                 </Link>
               </li>
@@ -42,7 +42,7 @@ function Nav() {
                 </Link>
               </li>
               <li class="nav-item">
-                <Link to="/" class="nav-link active">
+                <Link to="/activity/StepOne" class="nav-link active">
                   活動報名
                 </Link>
               </li>

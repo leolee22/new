@@ -4,7 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import React, { useState } from "react";
 import "../CalendarPage.css"; // Import custom CSS file for styling
 
-function StepOne() {
+function EquipmentStepOne() {
   const option = [
     { id: 1, item: "洗澡間" },
     { id: 2, item: "洗澡間" },
@@ -22,7 +22,7 @@ function StepOne() {
 
   const navigate = useNavigate();
   const handleButtonClick = () => {
-    navigate("/StepTwo"); // Navigates to '/another-page'
+    navigate("/equipment/StepTwo"); // Navigates to '/another-page'
   };
 
   const [selectedDate, setSelectedDate] = useState(null);
@@ -86,4 +86,4 @@ function StepOne() {
   );
 }
 
-export default StepOne;
+export default EquipmentStepOne;

@@ -10,7 +10,13 @@ const timeSlots = [
   { id: 6, time: "11:00 - 12:00", available: 1 },
 ];
 
-function StepOne() {
+const data = {
+  equipment: "預約設施 : 洗澡間",
+  date: "2024-06-29",
+  notice: "* 會員每日最多可預約 4 次",
+};
+
+function EquipmentStepTwo() {
   const [selectedSlots, setSelectedSlots] = useState([]);
 
   const handleCheckboxChange = (id) => {
@@ -34,10 +40,9 @@ function StepOne() {
           <h3>房間</h3>
         </div>
         <div class="card-body">
-          <h5 class="card-title">預約設施 : 洗澡間</h5>
-          <p class="card-text">2024-06-29</p>
-          <p class="card-text">洗澡間</p>
-          <p class="card-text">* 會員每日最多可預約 4 次</p>
+          <h5 class="card-title">{data.equipment}</h5>
+          <p class="card-text mb-0">{data.date}</p>
+          <p class="card-text">{data.notice}</p>
         </div>
       </div>
       <form onSubmit={handleSubmit}>
@@ -79,4 +84,4 @@ function StepOne() {
   );
 }
 
-export default StepOne;
+export default EquipmentStepTwo;
