@@ -1,6 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import EquipmentStepOne from "./equipment/StepOne";
-import EquipmentStepTwo from "./equipment/StepTwo";
+import EquipmentOptionOne from "./equipment/EquipmentOptionOne";
+import EquipmentOptionTwo from "./equipment/EquipmentOptionTwo";
+import EquipmentOptionThree from "./equipment/EquipmentOptionThree";
 import ActivityStepOne from "./activity/StepOne";
 import MyActivity from "./activity/MyActivity";
 import MyEquipment from "./equipment/MyEquipment";
@@ -23,8 +25,20 @@ function App() {
         ></Route>
         <Route
           exact
-          path="/equipment/StepTwo"
-          element={<EquipmentStepTwo />}
+          path="/equipment/EquipmentOptionOne"
+          element={<EquipmentOptionOne />}
+        ></Route>
+
+        <Route
+          exact
+          path="/equipment/EquipmentOptionTwo"
+          element={<EquipmentOptionTwo />}
+        ></Route>
+
+        <Route
+          exact
+          path="/equipment/EquipmentOptionThree"
+          element={<EquipmentOptionThree />}
         ></Route>
 
         <Route

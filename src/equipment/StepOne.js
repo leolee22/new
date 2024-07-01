@@ -1,28 +1,47 @@
-import { useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import React, { useState } from "react";
 import "../CalendarPage.css"; // Import custom CSS file for styling
+import OptionOne from "./EquipmentOptionOne";
+import OptionTwo from "./EquipmentOptionTwo";
+import OptionThree from "./EquipmentOptionTwo";
 
 function EquipmentStepOne() {
-  const option = [
-    { id: 1, item: "洗澡間" },
-    { id: 2, item: "洗澡間" },
-    { id: 3, item: "洗澡間" },
-    { id: 4, item: "洗澡間" },
-    { id: 5, item: "洗澡間" },
-    { id: 6, item: "洗澡間" },
-  ];
+  const [selectedItem, setSelectedItem] = useState("");
 
-  const option2 = [
+  const handleItem = (event) => {
+    setSelectedItem(event.target.value);
+  };
+
+  const option = [
     { id: 1, item: "房間" },
     { id: 2, item: "設施" },
     { id: 3, item: "器材" },
   ];
 
-  const navigate = useNavigate();
-  const handleButtonClick = () => {
-    navigate("/equipment/StepTwo"); // Navigates to '/another-page'
+  const roomItem = [
+    "洗澡間",
+    "備餐間",
+    "兒童閣",
+    "客廳(A)",
+    "客廳(B)",
+    "自修室",
+    "輔導室2",
+  ];
+  const facilityItem = ["自助洗衣及乾衣機"];
+  const equipmentItem = ["熨斗及熨板", "衣車", "閘骨車"];
+
+  const renderComponent = () => {
+    switch (selectedItem) {
+      case "房間":
+        return <OptionOne item={option[0].item} subItem={roomItem} />;
+      case "設施":
+        return <OptionTwo item={option[1].item} subItem={facilityItem} />;
+      case "器材":
+        return <OptionThree item={option[2].item} subItem={equipmentItem} />;
+      default:
+        return null;
+    }
   };
 
   const [selectedDate, setSelectedDate] = useState(null);
@@ -54,35 +73,21 @@ function EquipmentStepOne() {
           <label for="inputState" class="form-label">
             項目
           </label>
-          <select id="inputState" class="form-select">
+          <select
+            id="inputState"
+            class="form-select"
+            value={selectedItem}
+            onChange={handleItem}
+          >
             <option selected>項目...</option>
-            {option2.map((optionItem) => (
-              <option>{optionItem.item}</option>
-            ))}
-          </select>
-        </div>
-        <div class="col-12">
-          <label for="inputState" class="form-label">
-            細項
-          </label>
-          <select id="inputState" class="form-select">
-            <option selected>細項...</option>
             {option.map((optionItem) => (
               <option>{optionItem.item}</option>
             ))}
           </select>
         </div>
-
-        <div class="col-12 ">
-          <button
-            type="submit"
-            class="btn btn-info w-100"
-            onClick={handleButtonClick}
-          >
-            提交
-          </button>
-        </div>
       </form>
+
+      {renderComponent()}
     </div>
   );
 }
