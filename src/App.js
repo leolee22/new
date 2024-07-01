@@ -4,6 +4,7 @@ import EquipmentStepTwo from "./equipment/StepTwo";
 import ActivityStepOne from "./activity/StepOne";
 import MyActivity from "./activity/MyActivity";
 import MyEquipment from "./equipment/MyEquipment";
+import MemberPointStepOne from "./MemberPoint/StepOne";
 import Home from "./Home";
 import Nav from "./Nav";
 import "bootstrap";
@@ -40,6 +41,11 @@ function App() {
           exact
           path="/equipment/MyEquipment"
           element={<MyEquipment />}
+        ></Route>
+        <Route
+          exact
+          path="/MemberPoint/StepOne"
+          element={<MemberPointStepOne />}
         ></Route>
       </Routes>
     </nav>

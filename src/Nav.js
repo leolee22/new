@@ -6,7 +6,7 @@ function Nav() {
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <Link to="/" class="nav-link active">
-            ICON
+            社區客廳
           </Link>
           <button
             class="navbar-toggler"
@@ -22,7 +22,7 @@ function Nav() {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <Link to="/" class="nav-link active">
+                <Link to="/MemberPoint/StepOne" class="nav-link active">
                   我的積分
                 </Link>
               </li>

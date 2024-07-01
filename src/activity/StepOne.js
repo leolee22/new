@@ -19,6 +19,7 @@ function ActivityStepOne() {
 
   return (
     <div class="container ">
+      <h3>活動報名</h3>
       <form class="row g-3">
         <div class="col-12">
           <label for="inputState" class="form-label">

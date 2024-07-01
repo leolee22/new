@@ -33,6 +33,7 @@ function EquipmentStepOne() {
 
   return (
     <div class="container ">
+      <h3>預約設施</h3>
       <form class="row g-3">
         <div class="col-md-6">
           <label for="inputState" class="form-label">
